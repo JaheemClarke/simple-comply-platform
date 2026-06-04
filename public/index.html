@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Comply | Compliance Made Simple</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#home"><span>SC</span><div><b>Simple Comply</b><small>Compliance Made Simple</small></div></a>
+    <button class="menu" id="menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#platform">Platform</a>
+      <a href="#partners">Partners</a><a href="#contact">Contact</a>
+      <button class="btn outline" data-open="login">Login</button>
+      <button class="btn primary" data-open="register">Register</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container grid">
+    <div>
+      <p class="eyebrow">Guyanese Business Compliance Support</p>
+      <h1>Register. Stay Compliant. Grow with Confidence.</h1>
+      <p class="lead">Simple Comply helps entrepreneurs, contractors, sawmills, and growing businesses manage Business Registration, GRA, NIS, HSE, Accounting, document preparation, and compliance tracking.</p>
+      <div class="actions"><a class="btn primary" href="#contact">Request Service</a><a class="btn green" href="#assessment">Check Readiness</a></div>
+      <div class="chips"><span>Local Guidance</span><span>Secure Documents</span><span>Partner Reporting</span></div>
+    </div>
+    <div class="dashboard">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <h3>Compliance Dashboard</h3>
+      <div class="score">85%</div>
+      <p><b>Business Registration</b><span class="tag done">Completed</span></p>
+      <p><b>GRA Compliance</b><span class="tag progress">In Progress</span></p>
+      <p><b>NIS Compliance</b><span class="tag danger">Pending Docs</span></p>
+      <p><b>HSE Advisory</b><span class="tag neutral">Not Started</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid">
+    <div>
+      <p class="eyebrow">The Compliance Gap</p>
+      <h2>Many entrepreneurs are ready to grow, but their paperwork is not.</h2>
+      <p>Business owners lose time with unclear requirements, missing documents, repeated follow-ups, and poor record keeping. These delays affect registration, financing, contracts, and credibility.</p>
+    </div>
+    <div class="mini-grid">
+      <article><h3>Complex Registration</h3><p>Unclear steps slow business owners down.</p></article>
+      <article><h3>Missing Documents</h3><p>Incomplete files delay approvals.</p></article>
+      <article><h3>Poor Records</h3><p>Weak records reduce finance readiness.</p></article>
+      <article><h3>Slow Follow-up</h3><p>Clients need one system to track progress.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="services">
+  <div class="container">
+    <p class="eyebrow">End-to-End Support</p>
+    <h2>Core Services</h2>
+    <div class="cards" id="serviceCards"></div>
+  </div>
+</section>
+
+<section class="section" id="platform">
+  <div class="container">
+    <p class="eyebrow">Digital Compliance Platform</p>
+    <h2>One system for clients, staff, and partners.</h2>
+    <div class="portals">
+      <article><h3>Client Portal</h3><ul><li>Create account</li><li>Upload documents</li><li>Request services</li><li>Track status</li><li>Receive updates</li><li>Download documents</li></ul></article>
+      <article><h3>Admin Dashboard</h3><ul><li>Manage client files</li><li>Review documents</li><li>Assign officers</li><li>Track deadlines</li><li>Generate reports</li></ul></article>
+      <article><h3>Agency Partner Portal</h3><ul><li>Submit referrals</li><li>Track progress</li><li>View readiness</li><li>Receive reports</li><li>Monitor outcomes</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <p class="eyebrow">Guided Workflow</p>
+    <h2>From request to completion.</h2>
+    <div class="workflow"><div><b>1</b><h3>Sign Up</h3></div><div><b>2</b><h3>Upload Docs</h3></div><div><b>3</b><h3>Officer Review</h3></div><div><b>4</b><h3>Process</h3></div><div><b>5</b><h3>Results</h3></div></div>
+  </div>
+</section>
+
+<section class="section" id="assessment">
+  <div class="container grid">
+    <div><p class="eyebrow">Business Readiness Assessment</p><h2>Check how ready your business is.</h2><p>Answer a few questions to see what your business needs before financing, contracts, or support programmes.</p></div>
+    <form class="box" id="assessmentForm">
+      <label>Business registration?<select name="registration"><option value="20">Yes</option><option value="0">No</option></select></label>
+      <label>TIN?<select name="tin"><option value="20">Yes</option><option value="0">No</option></select></label>
+      <label>NIS registration?<select name="nis"><option value="20">Yes</option><option value="0">No</option></select></label>
+      <label>Financial records?<select name="records"><option value="20">Yes</option><option value="0">No</option></select></label>
+      <label>HSE documents?<select name="hse"><option value="20">Yes</option><option value="0">No</option></select></label>
+      <button class="btn green">Check My Readiness</button><div id="result" class="result">Score will appear here.</div>
+    </form>
+  </div>
+</section>
+
+<section class="section light" id="partners">
+  <div class="container">
+    <p class="eyebrow">Partnership Model</p>
+    <h2>Helping agencies prepare entrepreneurs before financing.</h2>
+    <div class="flow"><div>Agency Referral</div><span>→</span><div>Simple Comply</div><span>→</span><div>Compliance Ready Business</div></div>
+    <div class="mini-grid three"><article><h3>Reduce incomplete applications</h3><p>Structured file checks improve submission quality.</p></article><article><h3>Improve readiness</h3><p>Businesses prepare GRA, NIS, records, and documents.</p></article><article><h3>Track outcomes</h3><p>Partner reports show progress and completion.</p></article></div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <p class="eyebrow">Operations & Growth</p>
+    <h2>Built for field execution and scale.</h2>
+    <div class="portals">
+      <article><h3>Field Operations Team</h3><p>Officers handle document collection, registrations, GRA/NIS submissions, and follow-up.</p></article>
+      <article><h3>Revenue Streams</h3><p>Service fees, monthly packages, accounting support, HSE advisory, and subscriptions.</p></article>
+      <article><h3>Growth Roadmap</h3><p>Launch platform, expand partnerships, build a national compliance network.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container grid">
+    <div><p class="eyebrow">Contact Simple Comply</p><h2>Start your compliance process.</h2><p><b>Phone:</b> +592 7160349</p><p><b>Email:</b> simplecomply592@gmail.com</p><p><b>Location:</b> Linden, Region 10, Guyana</p></div>
+    <form class="box" id="contactForm">
+      <label>Full Name<input required name="name"></label><label>Business Name<input name="business_name"></label><label>Phone / WhatsApp<input required name="phone"></label>
+      <label>Email<input type="email" name="email"></label>
+      <label>Service Needed<select name="service"><option>Business Registration</option><option>GRA Compliance</option><option>NIS Compliance</option><option>HSE Advisory</option><option>Accounting Support</option><option>Partnership Inquiry</option></select></label>
+      <label>Message<textarea rows="4" name="message"></textarea></label><button class="btn primary">Submit Request</button><p id="note" class="result"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer"><b>Simple Comply</b><span>+592 7160349</span><span>simplecomply592@gmail.com</span></div></footer>
+
+<div class="modal" id="login"><div class="modal-card"><button class="close">×</button><h2>Login</h2><input id="loginEmail" value="admin@simplecomply.gy"><input id="loginPassword" type="password" value="ChangeThisAdminPassword123!"><button id="loginBtn" class="btn primary">Login</button><p id="loginNote" class="result"></p></div></div>
+<div class="modal" id="register"><div class="modal-card"><button class="close">×</button><h2>Create Client Account</h2><input id="regName" placeholder="Owner Name"><input id="regBusiness" placeholder="Business Name"><input id="regEmail" type="email" placeholder="Email"><input id="regPhone" placeholder="Phone"><input id="regPassword" type="password" placeholder="Password"><button id="registerBtn" class="btn primary">Create Account</button><p id="regNote" class="result"></p></div></div>
+
+<section class="portal hidden" id="portal">
+  <aside><b id="portalBrand">Simple Comply</b><button data-tab="dashboard">Dashboard</button><button data-tab="applications">Applications</button><button data-tab="documents">Documents</button><button data-tab="requests">Requests</button><button data-tab="admin">Admin</button><button class="exit">Exit</button></aside>
+  <div class="portal-main">
+    <h2 id="portalTitle">Portal</h2>
+    <div data-page="dashboard"><div class="metrics"><article><b id="stat1">0</b><span>Total Clients</span></article><article><b id="stat2">0</b><span>Active Cases</span></article><article><b id="stat3">0</b><span>Pending Docs</span></article></div><div class="box"><h3>Welcome</h3><p id="welcomeText">Your secure portal is ready.</p></div></div>
+    <div class="hidden" data-page="applications"><h3>Applications</h3><div id="applicationsList" class="box"></div></div>
+    <div class="hidden" data-page="documents"><h3>Document Vault</h3><form id="uploadForm" class="box"><input type="file" name="document" required><button class="btn primary">Upload Document</button></form><div id="documentsList" class="box"></div></div>
+    <div class="hidden" data-page="requests"><h3>Request Service</h3><form id="applicationForm" class="box"><select id="applicationService"></select><textarea id="applicationNotes" placeholder="Notes"></textarea><button class="btn primary">Submit Request</button></form></div>
+    <div class="hidden" data-page="admin"><h3>Admin Panel</h3><div id="adminList" class="box"></div></div>
+  </div>
+</section>
+<script src="/script.js"></script>
+</body>
+</html>
