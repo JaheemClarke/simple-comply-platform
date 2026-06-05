@@ -26,7 +26,47 @@ async function init() {
     role TEXT NOT NULL DEFAULT 'client',
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
   )`);
+await run(`CREATE TABLE IF NOT EXISTS readiness_assessments (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  business_name TEXT,
+  score INTEGER NOT NULL,
+  missing_items TEXT,
+  recommended_services TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)`);
 
+await run(`CREATE TABLE IF NOT EXISTS compliance_items (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  item_name TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'Pending',
+  due_date TEXT,
+  notes TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)`);
+
+await run(`CREATE TABLE IF NOT EXISTS invoices (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  invoice_number TEXT UNIQUE NOT NULL,
+  description TEXT,
+  amount REAL NOT NULL,
+  status TEXT NOT NULL DEFAULT 'Unpaid',
+  due_date TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)`);
+
+await run(`CREATE TABLE IF NOT EXISTS hse_reports (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  report_type TEXT NOT NULL,
+  location TEXT,
+  description TEXT NOT NULL,
+  corrective_action TEXT,
+  status TEXT NOT NULL DEFAULT 'Open',
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)`);
   await run(`CREATE TABLE IF NOT EXISTS services (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
