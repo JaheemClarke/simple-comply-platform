@@ -1,101 +1,204 @@
 :root {
-    --primary-blue: #0057B8;
-    --secondary-green: #009739;
-    --accent-gold: #FCD116;
-    --white: #FFFFFF;
-    --dark: #1A1A1A;
+  --guyana-green: #009E49;
+  --guyana-gold: #FCD116;
+  --guyana-red: #CE1126;
+  --guyana-black: #000000;
+  --guyana-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #f8fafc;
-    color: var(--dark);
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
 }
 
 .header {
-    background: var(--primary-blue);
+  background: var(--guyana-green);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo,
+.brand img.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.brand b {
+  color: white;
+  font-size: 20px;
+}
+
+.brand small {
+  color: var(--guyana-gold);
+  display: block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--guyana-green),
+    var(--guyana-red)
+  );
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .btn.primary {
-    background: var(--secondary-green);
-    color: white;
-}
-
-.eyebrow {
-    color: var(--accent-gold);
-}.logo {
-    width: 120px;
-    height: auto;
-    object-fit: contain;
-}
-
-.header a,
-.header nav a {
-  color: white;
-}
-
-.brand small {
-  color: var(--accent-gold);
+  background: var(--guyana-gold);
+  color: black;
 }
 
 .btn.outline {
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
-}.brand img.logo {
-  width: 44px !important;
-  height: 44px !important;
-  max-width: 44px !important;
-  max-height: 44px !important;
-  object-fit: contain;
-  display: block;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+section {
+  padding: 70px 20px;
 }
 
-.brand div {
-  display: flex;
-  flex-direction: column;
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.brand b {
+h2 {
+  color: var(--guyana-green);
+  margin-bottom: 20px;
+}
+
+.card,
+.service-card,
+.feature-card {
+  background: white;
+  padding: 25px;
+  margin: 15px 0;
+  border-left: 6px solid var(--guyana-red);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+footer {
+  background: var(--guyana-black);
   color: white;
-  font-size: 16px;
-  line-height: 1.1;
+  text-align: center;
+  padding: 30px;
 }
 
-.brand small {
-  color: #FCD116;
-  font-size: 12px;
-}.brand img.logo {
-  width: 44px !important;
-  height: 44px !important;
-  max-width: 44px !important;
-  max-height: 44px !important;
-  object-fit: contain;
-  display: block;
+footer a {
+  color: var(--guyana-gold);
+  text-decoration: none;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.brand div {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand b {
+.score {
+  background: var(--guyana-green);
   color: white;
-  font-size: 16px;
-  line-height: 1.1;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.brand small {
-  color: #FCD116;
-  font-size: 12px;
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: var(--guyana-green);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--guyana-red);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
 }
